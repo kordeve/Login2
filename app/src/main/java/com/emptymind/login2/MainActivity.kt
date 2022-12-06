@@ -16,27 +16,24 @@ class MainActivity : AppCompatActivity() {
 
             var inputId = getId.text.toString()
             var inputPass = getPass.text.toString()
+            //버튼 클릭 이벤트 전에 이 코드를 쓰면 변수에 값이 입력이 안된다.
 
-            if (inputId == "empol07" && inputPass == "qwer") {
+            if (inputId == "admin@test.com" && inputPass == "qwer") {
 
                 Log.d("메인화면 로그", "로그인 성공")
                 //tag는 종류
 
-                Toast.makeText(this, "관리자입니다", Toast.LENGTH_SHORT).show()
+                var name = "신훈일"
+
+                Toast.makeText(this, "${name}님 환영합니다", Toast.LENGTH_SHORT).show()
             }
-//            else if (inputId == "empol07" && inputPass != "qwer") {
-//
-//                Log.e("메인화면 로그", "패스워드 틀림")
-//
-//                Toast.makeText(this, "패스워드가 틀립니다", Toast.LENGTH_SHORT).show()
-//
-//            } else {
-//                Log.e("메인화면 로그", "아이디&패스워드 틀림")
-//
-//                Toast.makeText(this, "아이디와 패스워드 모두 틀립니다", Toast.LENGTH_SHORT).show()
-//
-//
-//            }
+            else {
+
+                Log.e("메인화면 로그", "패스워드 틀림")
+
+                Toast.makeText(this, "아이디나 패스워드가 틀립니다", Toast.LENGTH_SHORT).show()
+
+            }
 
         }
 
@@ -44,11 +41,3 @@ class MainActivity : AppCompatActivity() {
 
 }
 
-//clickBtn.setOnClickListener {
-//    Log.d("메인화면 로그","클릭용 버튼 눌림")
-//    Log.e("메인화면 로그","에러 관련 로그")
-//    //tag는 종류
-//
-//    smallBtn.setOnClickListener {
-//        Toast.makeText(this,"작은버튼 눌림",Toast.LENGTH_LONG).show()
-//    }
